@@ -1,61 +1,71 @@
-# 🔢 ESP8266 Random Number Chaos on I2C LCD
+# 🧙 Elisee's Magical ESP8266 LCD Projects
 
-Summon chaos with style. This project uses an ESP8266 and an I2C 16x2 LCD to display randomly generated numbers at random positions—perfect for testing, fun, or confusing mere mortals.
-
----
-
-### 👑 Owner
-
-> 🧠 **Crafted by:** [Elisee-M](https://github.com/Elisee-M)  
-> 🪄 Code Wizardry by: **Elisee, the Lazy Mage of Microcontrollers**
+A collection of chaotic, charming, and chill ESP8266 LCD projects straight from the lab of **Elisee the Lazy Mage**. Each sketch has a unique personality — from displaying random numbers to putting your name to sleep like a wizard on vacation.
 
 ---
 
-## 🧙 Features
+## 👑 Owner
 
-- Prints random numbers (0–99) on a 16x2 I2C LCD  
-- Each number appears at a random cursor position  
-- Auto-clears the LCD every 10 prints for more chaos  
-- Pure magical randomness — no purpose, all fun  
+**Created by:** [Elisee-M](https://github.com/Elisee-M)  
+**Title(s):** Bug Slayer · Name Shuffler · LCD Naplord
+
+---
+
+## 📦 Project List
+
+### 1. `arduino_codes.ino` – 🌀 Random Number Chaos
+
+- Random numbers (0–99) appear at random positions on a 16x2 LCD.
+- LCD clears every 10 numbers for more randomness.
+- Great for visual testing, boredom destruction, and displaying wizard energy.
+
+---
+
+### 2. `name_showcase.ino` – 🎭 Name Generator Theater
+
+- Cycles through a list of *funny* and *epic* name titles like:
+  - `🧙 Elisee the Wise`
+  - `404: Elisee Not Found`
+  - `Elisee.cpp Wizard`
+- Shows each name centered on the LCD every 2 seconds.
+- Perfect for ego boosting or conference demos 😎
+
+---
+
+### 3. `sleeping.ino` – 😴 Elisee is Sleeping
+
+- Displays `"Elisee is sleeping"` and animates the `"💤"` emoji drifting across the screen.
+- Loops indefinitely like a nap that never ends.
+- Ideal for idle display states, chill vibes, or post-debugging recovery.
+
+---
 
 ## 🧰 Hardware Required
 
-- ESP8266 board (e.g. NodeMCU, Wemos D1 Mini)  
-- I2C LCD display (16x2 or 20x4)  
-- Jumper wires  
-- (Optional) Breadboard  
+- ESP8266 (NodeMCU, Wemos D1 Mini, etc.)
+- 16x2 I2C LCD display
+- Jumper wires + optional breadboard
 
-## 🔌 Wiring Guide
+> 🔍 Most LCDs use I2C address `0x27` or `0x3F`
 
-| LCD Pin | ESP8266 Pin |
-|---------|-------------|
-| VCC     | 3V3         |
-| GND     | GND         |
-| SDA     | D2          |
-| SCL     | D1          |
+---
 
-> 📌 **Note**: Your I2C address is likely `0x27` or `0x3F`. Use an I2C scanner if unsure.
+## 🧪 How to Use
 
-## 💻 Installation
+1. Install the `LiquidCrystal_I2C` library via Arduino Library Manager.
+2. Connect your LCD:
+   - SDA → D2  
+   - SCL → D1  
+   - VCC → 3V3  
+   - GND → GND
+3. Open any `.ino` file in the Arduino IDE.
+4. Select your ESP8266 board and upload!
 
-1. Open Arduino IDE.  
-2. Install `LiquidCrystal_I2C` from the Library Manager.  
-3. Select your ESP8266 board and COM port.  
-4. Open the [`arduino_codes.ino`](arduino_codes.ino) file.  
-5. Upload and let the randomness rain.
+---
 
-## 📜 Code Overview
+## ✨ License
 
-```cpp```
-int randomNumber = random(0, 100);
-int col = random(0, 16);
-int row = random(0, 2);
-lcd.setCursor(col, row);
-lcd.print(randomNumber);
+MIT License — this code is free to use, remix, and sprinkle fairy dust on.  
+Just give a nod to **Elisee** if it made your LCD smile.
 
-loopCount++;
-if (loopCount >= 10) {
-  lcd.clear();
-  loopCount = 0;
-}
-```end```
+> _"May your screen glow bright, and your loops never crash."_ 🔁
