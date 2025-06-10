@@ -1,4 +1,4 @@
-# 🧙 Elisee's Magical ESP8266 LCD Projects
+# 🧙 Elisee's Magical ESP8266 LCD Projects 
 
 A collection of chaotic, charming, and chill ESP8266 LCD projects straight from the lab of **Elisee the Lazy Mage**. Each sketch has a unique personality — from displaying random numbers to putting your name to sleep like a wizard on vacation.
 
